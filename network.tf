@@ -2,10 +2,10 @@ provider "azurerm" {
   features {}
 }
 
-#resource "azurerm_resource_group" "myresourcegroup" {
-#  name     = "${var.prefix}-workshop"
-#  location = "southeastasia"
-#}
+resource "azurerm_resource_group" "myresourcegroup1" {
+  name     = "network-module"
+  location = "southeastasia"
+}
 
 module "network" {
   source              = "Azure/network/azurerm"
